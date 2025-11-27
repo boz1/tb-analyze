@@ -4,26 +4,38 @@ import argparse
 # ----------------------------------------------------------
 # Define the 20 fields in order exactly as they appear in SQL
 # ----------------------------------------------------------
+# FIELDS = [
+#     "block_time",
+#     "block_number",
+#     "tx_hash",
+#     "tx_from_address",
+#     "tx_to_address",
+#     "gas_used",
+#     "tx_fee_eth",
+#     "timeboosted",
+#     "bought_token_symbol",
+#     "sold_token_symbol",
+#     "bought_token_amount",
+#     "sold_token_amount",
+#     "amount_usd",
+#     "auction_round",
+#     "winner_address",
+#     "winner_name",
+#     "top_bid_eth",
+#     "paid_bid_eth",
+#     "express_lane_controller_address"
+# ]
 FIELDS = [
     "block_time",
     "block_number",
     "tx_hash",
     "tx_from_address",
     "tx_to_address",
+    "success",
     "gas_used",
+    "gas_price",
     "tx_fee_eth",
     "timeboosted",
-    "bought_token_symbol",
-    "sold_token_symbol",
-    "bought_token_amount",
-    "sold_token_amount",
-    "amount_usd",
-    "auction_round",
-    "winner_address",
-    "winner_name",
-    "top_bid_eth",
-    "paid_bid_eth",
-    "express_lane_controller_address"
 ]
 
 def parse_merged(row):
@@ -79,6 +91,6 @@ if __name__ == "__main__":
     # parser.add_argument("input_file", help="Path to input CSV with merged column")
     # parser.add_argument("output_file", help="Path to output cleaned CSV")
     # args = parser.parse_args()
-    input_file = "data/txs/april/timeboost_txs.csv"
-    output_file = "data/txs/april/timeboost_txs_parsed.csv"
+    input_file = "data/reverts/august/01KB09SQGF99VHRDT0HHHK9AWZ.csv"
+    output_file = "data/reverts/august/01KB09SQGF99VHRDT0HHHK9AWZ_parsed.csv"
     main(input_file, output_file)
