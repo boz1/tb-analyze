@@ -15,19 +15,19 @@ import pandas as pd
 # ── Schema definitions ──────────────────────────────────────
 SCHEMAS = {
     "txs": {
-        # "fields": [
-        #     "block_time", "block_number", "tx_hash",
-        #     "tx_from_address", "tx_to_address",
-        #     "gas_used", "tx_fee_eth", "timeboosted",
-        #     "bought_token_symbol", "sold_token_symbol",
-        #     "bought_token_amount", "sold_token_amount", "amount_usd",
-        # ],
-                "fields": [
+        "fields": [
             "block_time", "block_number", "tx_hash",
             "tx_from_address", "tx_to_address",
+            "gas_used", "tx_fee_eth", "timeboosted",
             "bought_token_symbol", "sold_token_symbol",
             "bought_token_amount", "sold_token_amount", "amount_usd",
         ],
+        #         "fields": [
+        #     "block_time", "block_number", "tx_hash",
+        #     "tx_from_address", "tx_to_address",
+        #     "bought_token_symbol", "sold_token_symbol",
+        #     "bought_token_amount", "sold_token_amount", "amount_usd",
+        # ],
         "numeric": [
             "gas_used", "tx_fee_eth",
             "bought_token_amount", "sold_token_amount", "amount_usd",
